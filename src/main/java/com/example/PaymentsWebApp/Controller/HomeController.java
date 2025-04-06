@@ -1,21 +1,22 @@
-package com.example.PaymentsWebApp.config;
+package com.example.PaymentsWebApp.Controller;
 
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class HomeController { 
 
     @GetMapping("/index")
     public String homePage() {
         return "index";  // Renders home.jsp
     }
 
-    @GetMapping("/profile")
-    public String profilePage() {
-        return "profile";  // Renders profile.jsp
-    }
+//    @GetMapping("/profile")
+//    public String profilePage() {
+//        return "profile";  // Renders profile.jsp
+//    }
+    
 
     @GetMapping("/transactions")
     public String transactionsPage() {

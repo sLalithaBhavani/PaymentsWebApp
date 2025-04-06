@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>editProfile</title>
+<title>sample edit profile</title>
 </head>
 <body>
-<p>this is edit profile page</p>
+<p>this is a sample edit profile page</p>
+<a href="profile">back to profile</a>
 </body>
 </html>
