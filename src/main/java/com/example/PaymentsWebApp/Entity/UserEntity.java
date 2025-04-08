@@ -1,8 +1,10 @@
 package com.example.PaymentsWebApp.Entity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "user_details")
@@ -33,6 +35,9 @@ public class UserEntity {
     @Column(name = "address")
     private String address;
 
+    @Column(name = "dob")
+    private LocalDate dob;
+
     // Getters and setters
     public int getUserId() { return userId; }
     public void setUserId(int userId) { this.userId = userId; }
@@ -57,4 +62,7 @@ public class UserEntity {
 
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
+
+    public LocalDate getDob() { return dob; }
+    public void setDob(LocalDate dob) { this.dob = dob; }
 }

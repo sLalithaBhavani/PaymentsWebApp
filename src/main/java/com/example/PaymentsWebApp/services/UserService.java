@@ -7,14 +7,23 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+
     @Autowired
     private UserRepository userRepository;
 
-    public UserEntity validateUser(String userName, String password) {
-        UserEntity user = userRepository.findByuserName(userName);
-        if (user != null && user.getPassword().equals(password)) {
-            return user;  // login success
+    public boolean registerUser(UserEntity user) {
+        if (userRepository.findByuserName(user.getUserName()) != null) {
+            return false; // User already exists
         }
-        return null; // login fail
+        userRepository.save(user);
+        return true;
+    }
+
+    public UserEntity validateUser(String username, String password) {
+        UserEntity user = userRepository.findByuserName(username);
+        if (user != null && user.getPassword().equals(password)) {
+            return user;
+        }
+        return null;
     }
 }
