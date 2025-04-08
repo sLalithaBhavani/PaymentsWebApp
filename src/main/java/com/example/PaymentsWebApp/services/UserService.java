@@ -15,7 +15,8 @@ public class UserService {
         if (userRepository.findByuserName(user.getUserName()) != null) {
             return false; // User already exists
         }
-        userRepository.save(user);
+        else {
+        userRepository.save(user);}
         return true;
     }
 

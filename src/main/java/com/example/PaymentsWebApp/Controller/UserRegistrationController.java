@@ -20,7 +20,7 @@ public class UserRegistrationController {
     }
 
     @PostMapping("/register")
-    public String registerUser(@ModelAttribute("user") UserEntity user, Model model) {
+    public String registerUser(@ModelAttribute UserEntity user, Model model) {
         boolean success = userService.registerUser(user);
         if (success) {
             model.addAttribute("msg", "Registration successful! Please login.");
