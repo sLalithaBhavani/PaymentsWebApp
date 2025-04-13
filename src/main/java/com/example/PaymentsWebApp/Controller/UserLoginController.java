@@ -21,7 +21,7 @@ public class UserLoginController {
         UserEntity user = userService.validateUser(username, password);
         if (user != null) {
             model.addAttribute("user", user);  // pass user to index.jsp
-            return "index";  // forward to index.jsp
+            return "/index";  // forward to index.jsp
         } else {
             model.addAttribute("error", "Invalid username or password");
             return "login";  // stay on login page with error

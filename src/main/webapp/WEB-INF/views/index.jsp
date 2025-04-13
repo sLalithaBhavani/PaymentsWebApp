@@ -33,7 +33,6 @@
 </head>
 <body>
 
-<!-- Fixed Navbar -->
 <div class="navbar">
     <a href="profile">Profile</a>
     <a href="transactions">Transactions History</a>
@@ -41,7 +40,7 @@
     <a href="logout">Logout</a>
 </div>
 
-<!-- Page Content -->
+
 <div class="content">
     <h2>Welcome User</h2>
     <p>This is your home page.</p>
@@ -49,3 +48,5 @@
 
 </body>
 </html>
+
+

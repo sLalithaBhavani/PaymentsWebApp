@@ -13,7 +13,7 @@
         <input type="submit" value="Login">
     </form>
     <p>Not registered? <a href="register">Register here</a></p>
-    <!--  sucess or failure msgs-->
+
     <p style="color:red">${error}</p>
     <p style="color:green">${msg}</p>
     
