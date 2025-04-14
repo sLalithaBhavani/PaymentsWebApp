@@ -59,7 +59,7 @@ public class UserLoginController {
         UserEntity user = userService.validateUser(username, password);
         if (user != null) {
             session.setAttribute("loggedInUser", user); // store user in session
-            return "redirect:/index"; // 
+            return "redirect:/index"; 
         } else {
             model.addAttribute("error", "Invalid username or password");
             return "login";
