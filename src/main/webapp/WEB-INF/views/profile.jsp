@@ -48,16 +48,20 @@
     UserEntity user = (UserEntity) session.getAttribute("loggedInUser");
     if (user != null) {
 %>
-    <div class="profile-info">
-        <h2>Hi, <%= user.getUserName() %>!</h2>
-        <p><strong>First Name:</strong> <%= user.getFirstName() %></p>
-        <p><strong>Last Name:</strong> <%= user.getLastName() %></p>
-        <p><strong>Email:</strong> <%= user.getEmail() %></p>
-        <p><strong>Phone:</strong> <%= user.getPhone() %></p>
-        <p><strong>Address:</strong> <%= user.getAddress() %></p>
-        <p><strong>Date of Birth:</strong> <%= user.getDob() %></p>
-    </div>
-    <a href="index">Back to Home</a>
+<div class="profile-info">
+    <h2>Hi, <%= user.getUserName() %>!</h2>
+    <p><strong>First Name:</strong> <%= user.getFirstName() %></p>
+    <p><strong>Last Name:</strong> <%= user.getLastName() %></p>
+    <p><strong>Email:</strong> <%= user.getEmail() %></p>
+    <p><strong>Phone:</strong> <%= user.getPhone() %></p>
+    <p>
+        <strong>Address:</strong> <%= user.getAddress() %>
+        <a href="editprofile" style="margin-left: 10px; font-size: 0.9em; text-decoration: none;">Edit</a>
+    </p>
+    <p><strong>Date of Birth:</strong> <%= user.getDob() %></p>
+</div>
+<a href="index" class="link">Back to Home</a>
+
 <%
     } else {
 %>

@@ -27,4 +27,8 @@ public class UserService {
         }
         return null;
     }
+    public void updateUser(UserEntity user) {
+        userRepository.save(user); // will update based on user_id
+    }
+
 }
